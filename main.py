@@ -23,7 +23,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return app.send_static_file('index.html')
+    return app.send_file('index.html', cache_timeout=3600)
 
 @app.route('/v1')
 def v1():
